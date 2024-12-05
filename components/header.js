@@ -4,7 +4,7 @@ template.innerHTML = `
         <ul>
             <li><a href="/">About Me</a></li>
             <li><a href="/experience.html">Experience</a></li>
-            <li><a href="#News">News</a></li>
+            <li><a href="/projects.html">Projects</a></li>
         </ul>
     </div>
 `;
