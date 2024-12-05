@@ -1,31 +1,42 @@
-# Portfolio Website
-Welcome to my portfolio website! This site showcases my projects, skills, and experiences as a software engineer.
+![My Logo](img/logo.svg)
 
-It can be visited [here](https://emorque.github.io/Portfolio/)
+# My Website
+This is my personal website. This site showcases my projects, skills, and experiences as a software engineer. I am also going to be adding a blog that will *hopefully* receive regular updates. 
+
+It can be visited at [emorque.com](https://emorque.github.io/Portfolio/)
+
+I also made sure to adjust values for smaller screens, so visting on mobile devices is welcome!
 
 ## Technologies Used
-- HTML, CS, Javascript
-
-## Screenshots
-### As of 8.11.2024
-
-![emorque github io_Portfolio_](https://github.com/user-attachments/assets/e594c74a-0250-41b2-ba63-429f3a721a40)
-
-![emorque github io_Portfolio_ (1)](https://github.com/user-attachments/assets/bc218d75-c98b-4c12-b984-0ab5bb05ef5f)
-
-![emorque github io_Portfolio_ (2)](https://github.com/user-attachments/assets/12036d9b-fe50-4c6b-ad0f-44b04b0544ff)
-
-![emorque github io_Portfolio_ (3)](https://github.com/user-attachments/assets/1c5bc368-b6a9-46d1-b635-cf5a3818a7b2)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ## How to Run
-If by chance you'd like to try to run the website on your local system:
-1. Clone this repo 
-2. Download node.js:
-3. Run this command:
-```bash
-npx serve
+I'm super flattered if you would like you run my website locally.
+Since it is build with solely HTML, CSS, and JS, all that is required is to download all files from here and run:
+``` bash
+index.html
 ```
-4. Or run index.html in your browser
 
-## Figma
-The Figma File can be accessed [here](https://www.figma.com/design/MJedN7Vrf84MPy7bwpYURr/Personal-Website?node-id=0-1&t=eRz7RU8JLecqF7Hk-0)
+## Screenshots
+<details>
+  <summary>Front Page</summary>
+    <img src="https://github.com/user-attachments/assets/8d21626a-7699-4ae9-88c1-36ef2e006a23" alt="Home Page"/>
+</details>
+
+<details>
+  <summary>Experiences Page</summary>
+    <img src="https://github.com/user-attachments/assets/4e588ef8-71b6-45e8-99d3-c1e34d80f6af" alt="Experiences Page"/>
+
+</details>
+
+<details>
+  <summary>Projects Page</summary>
+    <img src="https://github.com/user-attachments/assets/d23f8aab-8381-426c-81c6-446a39444af6" alt="Projects Page"/>
+</details>
+<!-- 
+  ![emorque com](https://github.com/user-attachments/assets/8d21626a-7699-4ae9-88c1-36ef2e006a23)
+  ![emorque com_experience html](https://github.com/user-attachments/assets/4e588ef8-71b6-45e8-99d3-c1e34d80f6af)
+  ![emorque com_projects html](https://github.com/user-attachments/assets/d23f8aab-8381-426c-81c6-446a39444af6)
+   --->
