@@ -3,7 +3,7 @@
 # My Website
 This is my personal website. This site showcases my projects, skills, and experiences as a software engineer. I am also going to be adding a blog that will *hopefully* receive regular updates. 
 
-It can be visited at [emorque.com](https://emorque.github.io/Portfolio/)
+It can be visited at [emorque.com](https://emorque.com/)
 
 I also made sure to adjust values for smaller screens, so visting on mobile devices is welcome!
 
