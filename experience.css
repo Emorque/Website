@@ -1,0 +1,36 @@
+:root {
+    --primary: #C00F0C;
+    --primary2: #e1120e;  
+    --b: #000;
+    --w: #FFF;
+    --g: #f4f4f4;
+    --syracuse: #f76801;
+  }
+  
+  /* Smooth Scrooling if I want to add a nav bar */
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  /* html {
+    box-sizing: border-box;
+  }
+  
+  *, ::before, ::after {
+    box-sizing: inherit;
+  }*/
+  
+  html {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    color: black;
+    font-family: Space Grotesk, sans-serif; 
+    margin: 0rem;
+  }
+  

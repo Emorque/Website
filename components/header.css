@@ -1,0 +1,37 @@
+
+/* Style rules for Navbar */
+.navbar {
+    position: relative;
+    z-index: 3;
+}
+
+/* Style rules for all items in ul */
+.navbar ul {
+    position: fixed;
+    margin-top: 0px;
+    background-color: #241B22EE;
+    list-style: none;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+
+.navbar ul li {
+    float: left;
+    padding: 10px;
+}
+
+.navbar ul li a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-family: Arial;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    font-weight: bold;
+    color: #00ffb1;
+}
