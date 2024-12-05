@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --primary: #C00F0C;
+  --primary2: #e1120e;  
+  --b: #000;
+  --w: #FFF;
+  --g: #f4f4f4;
+  --syracuse: #f76801;
+}
+
+/* Smooth Scrooling if I want to add a nav bar */
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+  
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--w);
+  color: black;
+  font-family: Space Grotesk, sans-serif; 
+  margin: 0rem;
+}
+  
+#header-br {
+  content: "";
+  height: 69px;
+  width: 100%;
+  background-color: black;
+}
+
+/* Styling for divs that need a white bg */
+.whitebg{
+  background: linear-gradient(to bottom right, white 0%, white 50%, var(--g) 50%, var(--g) 100%);
+}
+  
+
+/*Styling for the experience bar */
+#exp-bar {
+  content: "";
+  height: 20px;
+  width: 1vw;
+  background: linear-gradient(to right, var(--primary), #00000000);
+}
+  
+#experience h2 {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+#question-mark {
+    transition: all 1s;
+}
+.nopad {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Container for the work experiences */
+#work-exp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+#work-exp a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#work-exp h2 {
+  font-size:1.5rem; 
+  font-weight: 700;
+}
+
+#work-exp h3 {
+  font-size:1rem; 
+  font-weight: 700;
+}
+
+#work-time {
+  width: 20vw; /* The date gets 20 percent */
+}
+
+#work-content {
+  border-left-width: 1vh;
+  border-left: solid var(--primary);
+  padding-left: 1vw;
+  width: 80vw; /* The content gets 80 percent */
+}
+
+#work-content a:hover{
+  color: var(--primary);
+}
+  
+/* Styling for text that need to be color: primary2 */
+.red2{
+  color: var(--primary);
+  padding-left: 1vw;
+}
+
+/* Container for the resume button */
+#resume {
+  display: inline-block;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1vw;
+  position: relative;
+}
+
+/* Pulsing animation for when the resume button is hovered */
+#resume:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.99);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* rect class for adding rectangles coming out of the button */
+.rect {
+  position: absolute;
+  background-color: black;
+  transform: translateX(-50%);
+}
+
+.rect-top:nth-of-type(1) {
+  top: -40%; 
+  width: 10%;
+  height: 50%;
+  left: 30%
+}
+
+.rect-top:nth-of-type(2) {
+  top: -30%; 
+  width: 10%;
+  height: 50%;
+  left: 80%;
+}
+
+.rect-bottom:nth-of-type(3) {
+  bottom: -35%; 
+  width: 10%;
+  height: 40%;
+  left: 10%
+}
+
+.rect-bottom:nth-of-type(4) {
+  bottom: -35%; 
+  width: 10%;
+  height: 50%;
+  left: 60%;
+}
+
+.rect-left {
+  width: 10%;
+  height: 30%;
+  left: -4%;
+  top: 30%;
+}  
+.rect-right {
+  top: 60%;
+  width: 10%;
+  height: 30%;
+  left: 100%;
+}  
+  
+/* Styling for smaller sized screens */
+@media (max-width: 800px) {
+  #resume {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  /* Container for the work experiences */
+  #work-exp {
+    padding-left: 5vw;
+    padding-right: 5vw
+  }
+  #resume {
+    /* font-size: 1rem; */
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-height: 450px) and (max-width: 940px) {
+
+  /*Styling for the experience bar */
+  #exp-bar {
+    content: "";
+    height: 20px;
+    width: 1vw;
+    background: linear-gradient(to right, var(--primary), #00000000);
+  }
+
+  #experience {
+    margin-left: 10vw;
+  }
+
+  #experience h2 {
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* Animation for the question mark to appear at end of animation */
+  #question-mark {
+    transition: all 1s;
+  }
+}

@@ -14,14 +14,6 @@
   scroll-behavior: smooth;
 }
 
-/* html {
-  box-sizing: border-box;
-}
-
-*, ::before, ::after {
-  box-sizing: inherit;
-}*/
-
 html {
   overflow-x: hidden;
   overflow-y: auto;
@@ -36,92 +28,33 @@ body {
   margin: 0rem;
 }
 
-/* Each of the drawings */
-#gallery > .interactable {
-  width: 40vmin;
-  height: 56vmin;
-  object-fit: cover;
-  object-position: center;
-  filter: drop-shadow(0 0 0.25rem white);
-  transition: tranform 10s ease-in-out;
-  /* border-width: 1000px; */
+#header-br {
+  content: "";
+  height: 69px;
+  width: 100%;
+  background-color: black;
 }
 
-/* Container for the drawings */
-#gallery{
-  display: flex;
-  gap: 4vmin;
-  transform: translate(0%, 0%);
-  user-select: none;
-  width: 100vw;
-}
-
-/* Covers the scaling animation */
-/* .interactable {
-} */
-
-.interactable:hover {
-  transform: scale(1.01);
-}
-
-/* The hero section */
-.side {
-  height: 100vh;
-  width: 100vw;
-
-  display: grid;
-  place-items: center;
-
-  position: absolute;
-  overflow: hidden;
-}
-
-/* Container for my Name */
-#left-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;  
-}
-
-.left-text{
-  font-family: "Montserrat", sans-serif;
-  font-size: 5rem;
-  font-weight: 600;
-  margin: 0px 15vw;
-  width: 80vw;
+#name-container {
+  width: 100%;
   text-align: center;
-  color:white;
-  opacity: 0;
-  transition: opacity 1s ease;
 }
 
-.left-text.loaded {
-  opacity: 1;
-}
-
-
-/* Container that repeats the pattern */
-#pattern-container{
+#name {
+  color: var(--w);
   background-color: var(--primary);
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  opacity: 100%;
-}
-
-#pattern {
   background-image: url("img/headerPattern.svg");
   background-size: 600px, 600px;
   background-repeat: repeat;
   background-position: top left;
-  position: absolute;
+  padding: 10px;
+  margin: 0;
+}
+
+#name-pattern {
+  background-color: black;
   z-index: 1;
-  height: 100%; 
-  width: 100%; 
-  min-height: 100%;
-  min-width: 100%;
+  opacity: 10%;
 }
 
 /* Container for the biography */
@@ -157,347 +90,67 @@ body {
   max-height: 500px;
 }
 
-/* Class for sliding from left animation */
-.hidden {
-  filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 1s;
+
+/* Each of the drawings */
+#gallery > .interactable {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: center;
+  filter: drop-shadow(0 0 0.25rem white);
+  transition: tranform 10s ease-in-out;
+  /* border-width: 1000px; */
 }
 
-.hidden.college {
-  filter: blur(15px);
-  transform: translateX(0); /*Removed Sliding animation */
-  transition: all 1s;
-}
-
-/* Class that gets added for the animation */
-.show {
-  filter: blur(0);
-  transform: translateX(0);
-}
-
-.show.college{
-  filter: blur(0);
-}
-
-/* Grid container for websites */
-#my-projects {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-#my-websites {
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-/* Class for the projects */
-.website {
-  /* background-color: var(--primary); */
-  /* background: linear-gradient(var(--primary), var(--primary2)); */
-  border-radius: 10px;
+/* Container for the drawings */
+#gallery{
   display: flex;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-bottom: 5vh;
-  opacity: .80;
-  transition: opactity 1s ease;
-  color: var(--w);
-  text-align: left;
+  gap: 4vmin;
+  transform: translate(0%, 0%);
+  user-select: none;
+  width: 100vw;
 }
 
-.website:hover {
-  opacity: 1;
-}
-
-/* .web-photo {
-  display: inline-block;
-  margin: 0 auto;
+/* Covers the scaling animation */
+/* .interactable {
 } */
 
-.web-photo img {
-  height: 360px;
-  width: 640px;
-  border: 4px solid var(--primary);
+.interactable:hover {
+  transform: scale(1.01);
 }
 
-.web-info {
-  padding-left: 1vw;
-  padding-right: 1vw;
+/* Container for the biography */
+#bio{
   display: flex;
-  flex-direction: column;
-}
-
-.caption, .web-link svg {
-  font-size: 1rem;
-  color: var(--w);
-  fill: var(--w);
-}
-
-.web-link h3 {
-  color: var(--primary2);
-}
-
-.web-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.web-link a {
-  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  svg {
-    transition: transform 0.5s ease;
-  }
-}
-
-.web-link a:hover {
-  svg {
-    transform: translate(8px, -8px);
-  }
-}
-
-/* Grid container for projects */
-#my-projects {
-  width: 100%;
-  display: grid;
-  grid-template-areas: 
-    /* "nd su"; */
-    "nd su"
-    "web mm";
-
-  grid-template-columns: 1fr 1fr;
-}
-
-#nextdex {grid-area: nd;}
-#susocial {grid-area: su;}
-#website {grid-area: web;}
-#monstermon {grid-area: mm;}
-
-#my-projects a, .web-link a {
-  text-decoration: none;
-}
-
-/* Class for the projects */
-.pj {
-  /* background-color: var(--primary); */
-  background: linear-gradient(var(--primary), var(--primary2));
-  border-radius: 10px;
-  display: flex;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-bottom: 5vh;
-  opacity: 80%;
-}
-
-/* Increases opacity when project card is hovered */
-.pj:hover {
-  opacity: 100%;
-  svg{
-    transform: translate(8px, -8px);
-    color: white;
-  }
-}
-
-.pj svg{
-  text-decoration: none;
-  color: white;
-  transition: transform 0.5s ease;
-}
-
-.pj-photo {
-  display: inline-block;
-}
-
-/* Project image styling */
-.pj-photo img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
-
-.p-name {
-  display: flex;
-  align-items: center;
-  color: black;
-}
-
-/* Styling for the arrow in the project card */
-.p-name svg {
-  padding-left: 10px;
-  padding-top: 15px;
-  width: 25px;
-  height: 25px;
-}
-
-.p-info {
-  padding-left: 1vw;
-  padding-right: 1vw;
-}
-
-/* h styling for the project card */
-.p-info h2 {
-  margin: 0;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 1.5rem;
-}
-
-.p-info h3 {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 5%;
-  color: white;
-  font-size: 1rem;
-}
-
-/* Styling for the container that holds the tech tags in the project cards */
-.tags {
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 5%;
-}
-
-/* Styling for the h3 in tags */
-.tags h3 {
-  border-radius: 20px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-left: 10px;
-  background-color: var(--primary);
-  font-size: 0.75rem;
-
-}
-
-/* Container for the work experiences */
-#work-exp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
   padding-left: 10vw;
   padding-right: 10vw;
-  /* width: 80vw; */
+  gap: 10vw;
+  text-align: center;
 }
 
-#work-exp a {
-  text-decoration: none;
-  color: inherit;
+/* Each child element is set to 25vw*/
+#bio > * {
+  width: 25vw;  
+  height: auto;  
 }
 
-#work-exp h2 {
+#bio h2 {
   font-size:1.5rem; 
   font-weight: 700;
-}
-
-#work-exp h3 {
-  font-size:1rem; 
-  font-weight: 700;
-}
-
-#work-time {
-  width: 20vw; /* The date gets 20 percent */
-}
-
-#work-content {
-  border-left-width: 1vh;
+  padding-left: 10vw;
+  border-left-width: 1vw;
   border-left: solid var(--primary);
-  padding-left: 1vw;
-  width: 80vw; /* The content gets 80 percent */
+  color:white
 }
 
-#work-content a:hover{
-  color: var(--primary);
+#bio img {
+  max-width: 500px;
+  max-height: 500px;
 }
-
-/* Generic class for divs that want center styling */
-.cen {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-
-/* Container for the resume button */
-#resume {
-  display: inline-block;
-  border-radius: 10px;
-  text-decoration: none;
-  background-color: black;
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 1vw;
-  position: relative;
-}
-
-/* Pulsing animation for when the resume button is hovered */
-#resume:hover {
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.99);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* rect class for adding rectangles coming out of the button */
-.rect {
-  position: absolute;
-  background-color: black;
-  transform: translateX(-50%);
-}
-
-.rect-top:nth-of-type(1) {
-  top: -40%; 
-  width: 10%;
-  height: 50%;
-  left: 30%
-}
-
-.rect-top:nth-of-type(2) {
-  top: -30%; 
-  width: 10%;
-  height: 50%;
-  left: 80%;
-}
-
-.rect-bottom:nth-of-type(3) {
-  bottom: -35%; 
-  width: 10%;
-  height: 40%;
-  left: 10%
-}
-
-.rect-bottom:nth-of-type(4) {
-  bottom: -35%; 
-  width: 10%;
-  height: 50%;
-  left: 60%;
-}
-
-.rect-left {
-  width: 10%;
-  height: 30%;
-  left: -4%;
-  top: 30%;
-}  
-.rect-right {
-  top: 60%;
-  width: 10%;
-  height: 30%;
-  left: 100%;
-}  
 
 /* Grid container that contains education and my skills */
 #toolbelt {
@@ -545,70 +198,8 @@ body {
   padding-left: 1vw;
 }
 
-/* Foot Container that houses links */
-#links {
-  display: flex;
-  justify-content: right;
-  padding-right: 4vw;
-  gap: 20px;
-  flex: 9;
-}
-
-#links-container{
-  display: flex;
-  padding: 1vw;
-}
-
-#links a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Added animation for svgs: a slight Y increase when hovered */
-#links svg{
-  padding-bottom: 2vh;
-  padding-top: 1vh;
-  transition: transform 0.5s ease;
-}
-
-#links svg:hover{
-  fill:var(--primary);
-  cursor: pointer;
-  transform: translateY(-5px);
-}
-
-/* Added animation for logo img: a slight Y increase when hovered */
-#logo img{
-  flex: 1;
-  display: flex;
-  justify-content: left;
-  /* padding-top: 1vh; */
-  padding-left: 2vw;
-  transition: transform 0.5s ease;
-}
-
-#logo img:hover {
-  transform: translateY(-5px);
-}
-
-#drawText2{
-  display:none;
-}
-
-/* If the user doesn't want animations, removes animations */
-@media(prefers-reduced-motion) {
-  .hidden{
-    transition: none;
-  }
-}
 
 @media (max-width: 940px){
-  .website {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   html {
     overflow-x: hidden;
     overflow-y: auto;
@@ -617,28 +208,6 @@ body {
 
 /* Styling for smaller sized screens */
 @media (max-width: 800px) {
-  .web-photo img {
-    height: 180px;
-    width: 320px;
-    border: 4px solid var(--primary);
-  }
-
-  #my-projects {
-    grid-template-areas: 
-      "nd"
-      "su"
-      "web"
-      "mm";
-
-    grid-template-columns: 1fr;
-  }
-
-  .pj{
-    margin: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-  
   #toolbelt {
     width: 100%;
     padding: 5px;
@@ -688,31 +257,13 @@ body {
     gap: 10vw;
   }
 
-  .left-text{
-    font-size: 4rem;
-  }
-  
   #bio h2 {
     font-size:1rem; 
-  }
-
-  #resume {
-    padding: 10px;
   }
 }
 
 /* Styling for phone screens */
 @media (max-width: 600px) {
-  #my-projects {
-    grid-template-areas: 
-      "nd"
-      "su"
-      "web"
-      "mm";
-
-    grid-template-columns: 1fr;
-  }
-
   #bio{
     display: flex;
     flex-direction: column;
@@ -721,10 +272,6 @@ body {
   #bio h2{
     border-left: 0;
     padding: 0;
-  }
-
-  .pj {
-    margin: 10px;
   }
 
   #toolbelt {
@@ -744,10 +291,6 @@ body {
     text-align: center;
   }
 
-  .left-text {
-    font-size: 2.5rem;
-  }
-  
   h2 {
     font-size: 1.25rem;
   }
@@ -755,101 +298,12 @@ body {
   h3 {
     font-size: 1rem;
   }
-
-  .p-info{
-    padding: 0px;
-  }
   
   #bio > * {
     width: 80vw;
   }
 
-  #gallery-Holder {
-    display: none;
-  }
-
   .rect-top {
     top: -70%; 
   }
-    /* Container for the work experiences */
-  #work-exp {
-    padding-left: 5vw;
-    padding-right: 5vw
-  }
-
-  #drawText1{
-    display: none;
-  }
-  #drawText2{
-    display: block;
-  }
-  #resume {
-    /* font-size: 1rem; */
-    padding: 10px;
-  }
-}
-
-
-/* Styling for larger screens */
-@media (min-width: 1800px) {
-  #my-projects {
-    grid-template-areas: 
-      "nd su web mm";
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .pj {
-    margin-left: 1vw;
-    margin-right: 1vw;
-  }
-}
-
-@media only screen and (max-height: 450px) and (max-width: 940px) {
-  #gallery-Holder {
-    display: none;
-  }  
-  #drawText1{
-    display: none;
-  }
-  #drawText2{
-    display: block;
-  }
-}
-
-/*Styling for the experience bar */
-#exp-bar {
-  content: "";
-  height: 20px;
-  width: 1vw;
-  background: linear-gradient(to right, var(--primary), #00000000);
-}
-
-#experience {
-  margin-left: 10vw;
-}
-
-#experience h2 {
-  padding: 0;
-  margin: 0;
-  font-style: italic;
-}
-
-/* Animation for the question mark to appear at end of animation */
-#question-mark {
-  transition: all 1s;
-}
-
-#rock:hover{
-  color: grey;
-  cursor: url("img/rock.png"), auto;
-}
-
-#draw:hover{
-  color: #ddce22;
-  cursor: url("img/pencil.png"), auto;
-}
-
-.nopad {
-  padding-left: 0;
-  padding-right: 0;
 }
