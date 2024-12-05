@@ -2,11 +2,9 @@ const template = document.createElement("template");
 template.innerHTML = `
     <div class="navbar">
         <ul>
-            <li><a href="#containerVid">Imagine</a></li>
-            <li><a href="#Impact">Impact</a></li>
+            <li><a href="/">About Me</a></li>
+            <li><a href="/experience.html">Experience</a></li>
             <li><a href="#News">News</a></li>
-            <li><button class="theme-button" id="darkMode-button">Toggle Dark Mode</button></li>
-            <li><button class="theme-button" id="slowmo-button">Slow Motion</button></li>
         </ul>
     </div>
 `;
