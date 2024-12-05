@@ -28,7 +28,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: var(--g);
+    background-color: var(--w);
     color: black;
     font-family: Space Grotesk, sans-serif; 
     margin: 0rem;
@@ -68,7 +68,6 @@ body {
     justify-content: center;
     padding-left: 10vw;
     padding-right: 10vw;
-    /* width: 80vw; */
   }
   
   #work-exp a {
@@ -101,7 +100,11 @@ body {
     color: var(--primary);
   }
   
-  
+/* Styling for text that need to be color: primary2 */
+.red2{
+  color: var(--primary);
+  padding-left: 1vw;
+}
 
 /* Container for the resume button */
 #resume {
