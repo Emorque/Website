@@ -14,14 +14,6 @@
   scroll-behavior: smooth;
 }
 
-/* html {
-  box-sizingf: border-box;
-}
-
-*, ::before, ::after {
-  box-sizing: inherit;
-}*/
-
 html {
   overflow-x: hidden;
   overflow-y: auto;

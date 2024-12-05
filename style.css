@@ -36,6 +36,87 @@ body {
   margin: 0rem;
 }
 
+#header-br {
+  content: "";
+  height: 64px;
+  width: 100%;
+  background-color: black;
+}
+
+#name-container {
+  width: 100%;
+  text-align: center;
+  /* height: fit-content; */
+}
+
+#name {
+  /* width: fit-content;
+  height: fit-content;
+   */
+  color: var(--w);
+  background-color: var(--primary);
+  background-image: url("img/headerPattern.svg");
+  background-size: 600px, 600px;
+  background-repeat: repeat;
+  background-position: top left;
+  padding: 10px;
+  margin: 0;
+  /* position: absolute; */
+  /* z-index: 1; */
+  /* height: 100%;  */
+  /* width: 100%;  */
+  /* min-height: 100%; */
+  /* min-width: 100%; */
+}
+
+#name-pattern {
+  background-color: black;
+  z-index: 1;
+  opacity: 10%;
+}
+
+/* #patt {
+  background-image: url("img/headerPattern.svg");
+  background-repeat: repeat;
+  background-position: top left;
+  position: absolute;
+  z-index: 1;
+} */
+
+/* Container for the biography */
+#bio{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  gap: 10vw;
+  text-align: center;
+}
+
+/* Each child element is set to 25vw*/
+#bio > * {
+  width: 25vw;  
+  height: auto;  
+}
+
+#bio h2 {
+  font-size:1.5rem; 
+  font-weight: 700;
+  padding-left: 10vw;
+  border-left-width: 1vw;
+  border-left: solid var(--primary);
+  color:white
+}
+
+#bio img {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+
 /* Each of the drawings */
 #gallery > .interactable {
   width: 40vmin;

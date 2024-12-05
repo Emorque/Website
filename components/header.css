@@ -1,3 +1,12 @@
+:root {
+    --primary: #C00F0C;
+    --primary2: #e1120e;  
+    --b: #000;
+    --w: #FFF;
+    --g: #f4f4f4;
+    --syracuse: #f76801;
+}  
+
 
 /* Style rules for Navbar */
 .navbar {
@@ -9,11 +18,17 @@
 .navbar ul {
     position: fixed;
     margin-top: 0px;
+    margin: 0;
     background-color: #241B22EE;
     list-style: none;
     overflow: hidden;
     top: 0;
+    padding-top: 5px;
+    padding-left: 5px;
     width: 100%;
+    
+    display: flex; /* Use flexbox */
+    align-items: center; /* Optionally center items vertically (if needed) */
 }
 
 .navbar ul li {
@@ -24,7 +39,7 @@
 .navbar ul li a {
     display: block;
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
     font-family: Arial;
     color: white;
     font-size: 16px;
@@ -33,5 +48,5 @@
 
 .navbar ul li a:hover {
     font-weight: bold;
-    color: #00ffb1;
+    color: var(--primary2);
 }

@@ -2,7 +2,7 @@ const template = document.createElement("template");
 template.innerHTML = `
     <div class="navbar">
         <ul>
-            <li><a href="/">About Me</a></li>
+            <li><a href="/"><img src="img/logo.svg" width="40" height="40" alt="My own Logo"/></a></li>
             <li><a href="/experience.html">Experience</a></li>
             <li><a href="/projects.html">Projects</a></li>
         </ul>
