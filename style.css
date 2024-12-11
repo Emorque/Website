@@ -4,7 +4,7 @@
   --primary: #C00F0C;
   --primary2: #e1120e;  
   --b: #000;
-  --w: #FFF;
+  --w: #dddddd;
   --g: #f4f4f4;
   --syracuse: #f76801;
 }
@@ -22,7 +22,7 @@ html {
 body {
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background-color: var(--w);
   color: black;
   font-family: Space Grotesk, sans-serif; 
   margin: 0rem;
