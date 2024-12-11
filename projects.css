@@ -38,27 +38,19 @@ body {
   background-color: black;
 }
 
-/* Grid container for websites */
-#my-projects {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
 #my-websites {
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
 }
 
-/* Class for the projects */
+/* Class for the webistes */
 .website {
   border-radius: 10px;
   display: flex;
   margin-left: 5vw;
   margin-right: 5vw;
   margin-bottom: 5vh;
-  /* opacity: .80; */
   transition: opactity 1s ease;
   color: var(--w);
   text-align: left;
@@ -66,12 +58,9 @@ body {
   transition: all 0.5s ease;
 }
 
-/* .website:hover {
-  opacity: 1;
-} */
-
+/* Gradient animation for hovering over website */
 .website:hover {
-  background: linear-gradient(-45deg, #000000, #1b1b1b, #2b2b2b, #3b3b3b);
+  background: linear-gradient(-45deg, #000000, #101010, #202020, #303030);
   background-size: 200%, 200%;
   animation: gradient 15s ease infinite;
 }
@@ -88,6 +77,7 @@ body {
 	}
 }
 
+/* Website photo and info section */
 .web-photo {
   display: inline-block;
   margin: 0 auto;
@@ -97,6 +87,7 @@ body {
   height: 360px;
   width: 640px;
   border: 4px solid var(--primary);
+  border-radius: 10px;
 }
 
 .web-info {
@@ -112,6 +103,7 @@ body {
   fill: var(--w);
 }
 
+/* Container for website button and links */
 .web-link h3 {
   color: var(--primary2);
 }
@@ -122,6 +114,7 @@ body {
   align-items: center;
 }
 
+/* Styling for the Demo/HomePage button for each website */
 .web-button {
   width: 100px;
   background-color: var(--primary);
@@ -141,6 +134,7 @@ body {
   align-items: center;
   svg {
     transition: transform 0.5s ease;
+    margin-left: 5px;
   }
 }
 
@@ -150,99 +144,7 @@ body {
   }
 }
 
-/* Grid container for projects */
-#my-projects {
-  width: 100%;
-  display: grid;
-  grid-template-areas: 
-    /* "nd su"; */
-    "nd su"
-    "web mm";
-
-  grid-template-columns: 1fr 1fr;
-}
-
-#nextdex {grid-area: nd;}
-#susocial {grid-area: su;}
-#website {grid-area: web;}
-#monstermon {grid-area: mm;}
-
-#my-projects a, .web-link a {
-  text-decoration: none;
-}
-
-/* Class for the projects */
-.pj {
-  background: linear-gradient(var(--primary), var(--primary2));
-  border-radius: 10px;
-  display: flex;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-bottom: 5vh;
-  opacity: 80%;
-}
-
-/* Increases opacity when project card is hovered */
-.pj:hover {
-  opacity: 100%;
-  svg{
-    transform: translate(8px, -8px);
-    color: white;
-  }
-}
-
-.pj svg{
-  text-decoration: none;
-  color: white;
-  transition: transform 0.5s ease;
-}
-
-.pj-photo {
-  display: inline-block;
-}
-
-/* Project image styling */
-.pj-photo img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
-
-.p-name {
-  display: flex;
-  align-items: center;
-  color: black;
-}
-
-/* Styling for the arrow in the project card */
-.p-name svg {
-  padding-left: 10px;
-  padding-top: 15px;
-  width: 25px;
-  height: 25px;
-}
-
-.p-info {
-  padding-left: 1vw;
-  padding-right: 1vw;
-}
-
-/* h styling for the project card */
-.p-info h2 {
-  margin: 0;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 1.5rem;
-}
-
-.p-info h3 {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 5%;
-  color: white;
-  font-size: 1rem;
-}
+/* Styling for non-website projects */
 
 #moreProjects, #gameProjects {
   width: 100%;
@@ -265,6 +167,7 @@ body {
   }
 }
 
+/* Animation for project logos */
 .imgLink {
   transition: transform 0.5s ease;
 }
@@ -273,25 +176,8 @@ body {
   transform: translate(0, -10px);
 }
 
-/* Styling for the container that holds the tech tags in the project cards */
-.tags {
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 5%;
-}
 
-/* Styling for the h3 in tags */
-.tags h3 {
-  border-radius: 20px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-left: 10px;
-  background-color: var(--primary);
-  font-size: 0.75rem;
-
-}
-
+/* Styling for headings */
 .cen {
   text-align: center;
   align-items: center;
@@ -309,7 +195,12 @@ body {
   padding-left: 1vw;
 }
 
-@media (max-width: 940px){
+/* Removes Links */
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 1100px){
   .website {
     display: flex;
     flex-direction: column;
@@ -322,72 +213,19 @@ body {
   }
 }
 
-/* Styling for smaller sized screens */
-@media (max-width: 800px) {
-
-
-  #my-projects {
-    grid-template-areas: 
-      "nd"
-      "su"
-      "web"
-      "mm";
-
-    grid-template-columns: 1fr;
-  }
-
-  .pj{
-    margin: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}
-
 /* Styling for phone screens */
 @media (max-width: 600px) {
-  #my-projects {
-    grid-template-areas: 
-      "nd"
-      "su"
-      "web"
-      "mm";
-
-    grid-template-columns: 1fr;
-  }
   .web-photo img {
     height: 180px;
     width: 320px;
     border: 4px solid var(--primary);
   }
 
-  .pj {
-    margin: 10px;
-  }
-  
   h2 {
     font-size: 1.25rem;
   }
 
   h3 {
     font-size: 1rem;
-  }
-
-  .p-info{
-    padding: 0px;
-  }
-}
-
-
-/* Styling for larger screens */
-@media (min-width: 1800px) {
-  #my-projects {
-    grid-template-areas: 
-      "nd su web mm";
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .pj {
-    margin-left: 1vw;
-    margin-right: 1vw;
   }
 }
