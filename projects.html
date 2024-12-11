@@ -15,118 +15,6 @@
 
   <div id="header-br"></div>
 
-  <!-- Projects Section -->
-  <section class="blackbg" style="background-color: black;">
-    <h1 class="cen red2 nopad">My Projects</h1>
-    <div id="my-projects">
-      <!-- NextDex -->
-      <a id="nextDexLink" href="https://github.com/Emorque/NextDex" target="_blank">
-      <div id="nextdex" class="pj">
-        <div class="pj-photo">
-          <img
-          src="img/nextdex.svg"
-          alt="NextDex logo"
-        />
-        </div>
-        <div class="p-info">
-          <div class="p-name">
-            <h2>NextDex</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-              </svg>
-          </div>
-          <h3>A Pokédex Web Application with Pokémon information from PokeAPI</h3>
-          <div class="tags" style="display: flex;">
-            <h3>Next.JS</h2>
-            <h3>Tailwind</h2>
-            <h3>RESTful API</h2>
-          </div>
-        </div>
-      </div>
-      </a>
-
-      <!-- SU Social -->
-      <a id="suSocialLink" href="https://github.com/Emorque/SU_Social" target="_blank">
-      <div id="susocial" class="pj">
-        <div class="pj-photo">
-          <img
-          src="img/su_social.png"
-          alt="Syracuse University Social logo"
-        />
-        </div>
-        <div class="p-info">
-          <div class="p-name">
-            <h2>SU Social</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-              </svg>
-          </div>
-          <h3>An Android Social Media App for Syracuse University Students</h3>
-          <div class="tags" style="display: flex;">
-            <h3>Java</h3>
-            <h3>Google Firebase</h3>
-            <h3>Android Studio</h3>
-          </div>
-        </div>
-      </div>
-      </a>
-
-      <!-- Personal Website -->
-      <a id="porfolioLink" href="https://github.com/Emorque/Portfolio" target="_blank">
-      <div id="website" class="pj">
-        <div class="pj-photo">
-          <img
-          src="img/logo.svg"
-          alt="My Website logo"
-        />
-        </div>
-        <div class="p-info">
-          <div class="p-name">
-            <h2>Portfolio</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-              </svg>
-          </div>
-          <h3>My Personal Portfolio Website that you are on right now!</h3>
-          <div class="tags" style="display: flex;">
-            <h3>HTML</h3>
-            <h3>CSS</h3>
-            <h3>Javascript</h3>
-          </div>
-        </div>
-      </div>
-      </a>
-
-      <!-- MonsterMon -->
-      <a id="monsterMonLink" href="https://github.com/Emorque/MonsterMon" target="_blank">
-      <div id="monstermon" class="pj">
-        <div class="pj-photo">
-          <img
-          src="img/monstermon.svg"
-          alt="MonsterMon logo"
-        />
-        </div>
-        <div class="p-info">
-          <div class="p-name">
-            <h2>MonsterMon</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-              </svg>
-          </div>
-          <h3>VR Monster Catching Game made with Unity</h3>
-          <div class="tags" style="display: flex;">
-            <h3>Unity</h3>
-            <h3>C#</h3>
-          </div>
-        </div>
-      </div>
-      </a>
-    </div>
-
-    <br/>
-    <br/>
-  </section>
-
   <!-- Websites Section -->
   <section class="blackbg" style="background-color: black;">
     <br/>
@@ -136,6 +24,7 @@
       <div id="octopath" class="website">
         <div class="web-photo">
           <img
+          id="ot-photo"
           src="img/octopath.webp"
           alt="front page of my octopath traveler website"
           />
@@ -146,6 +35,11 @@
             Octopath Traveler is one of my favorite games, so I wanted to see how well I could recreate some UI elements from the game, and in the process, perhaps learn why certain decisions were made.
           </h2>
           <div class="web-links">
+            <div class="web-link">
+              <button id="ot-button" class="web-button">
+                Demo
+              </button>
+            </div>
             <div class="web-link">
               <a href="https://emorque.github.io/Octopath-Traveler-UI/" target="_blank">
                 <h3>Website</h3>
@@ -164,21 +58,144 @@
               </a>
             </div>
 
-            <div class="web-link">
-              <!-- <a href=""> -->
-                <h3>Blog Coming Soon</h3>
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-                </svg>
-              </a> -->
             </div>
 
           </div>
         </div>
-      </div>
-    </div>
 
+
+      <!-- TypeSwitch -->
+      <div id="typeswitch" class="website">
+        <div class="web-photo">
+          <img
+          id="typeswitch-photo"
+          src="img/typeswitch.png"
+          alt="front page of my typeswitch website"
+          />
+        </div>
+        <div class="web-info">
+          <h2>TypeSwitch</h2>
+          <h2 class="caption">I created this project as an application to grow with Google's Translation API. Aiming to improve my Spanish writing, I developed it to help me learn the language in context. Since the API supports 18 language pairs, I added that feature for others to use as well.
+          </h2>
+          <div class="web-links">
+            <div class="web-link">
+              <button id="typeswitch-button" class="web-button">
+                Demo
+              </button>
+            </div>
+            <div class="web-link">
+              <a href="https://typeswitch.pages.dev/" target="_blank">
+                <h3>Website</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="web-link">
+              <a href="https://github.com/Emorque/TypeSwitch" target="_blank">
+                <h3>GitHub</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+              </a>
+            </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        
+      <!-- NextDex -->
+      <div id="nextdex" class="website">
+        <div class="web-photo">
+          <img
+          id="nextdex-photo"
+          src="img/nextdex.png"
+          alt="front page of my typeswitch website"
+          />
+        </div>
+        <div class="web-info">
+          <h2>NextDex</h2>
+          <h2 class="caption">I created this website to improve my React.js skills and work with server-side rendering using Next.js. As a Pokémon fan, building a Pokédex was a natural choice. I aim to make it a fluid and eye-catching website. 
+          </h2>
+          <div class="web-links">
+            <div class="web-link">
+              <button id="nextdex-button" class="web-button">
+                Demo
+              </button>
+            </div>
+            <div class="web-link">
+              <a href="https://next-dex-nine.vercel.app/" target="_blank">
+                <h3>Website</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="web-link">
+              <a href="https://github.com/Emorque/NextDex" target="_blank">
+                <h3>GitHub</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+              </a>
+            </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     <br/>
   </section>
+  
+  <!-- Game Projects -->
+  <section id="gameProjects">
+    <h1 class="cen red2 nopad">Game Projects</h1>
+
+    <!-- MonsterMon -->
+    <div id="monstermon" class="mProjects">
+      <h2>MonsterMon</h2>
+      <div style="display: flex; align-items: center;">
+        <a class="imgLink" href="https://github.com/Emorque/MonsterMon" target="_blank">
+          <img
+          src="img/monstermon.svg"
+          alt="MonsterMon logo"
+          width="100px"
+          height="100px"
+          />
+        </a>
+        <h3>VR Monster Catching Simulator</h3>
+      </div>        
+    </div>
+  </section>
+
+  <br/>
+
+  <!-- More Projects -->
+  <section id="moreProjects">
+    <h1 class="cen red2 nopad">Other Projects</h1>
+    <!-- Monster Mon -->
+    <div id="su_social" class="mProjects">
+      <h2>SU Social</h2>
+      <div style="display: flex; align-items: center;">
+        <a class="imgLink" href="https://github.com/Emorque/SU_Social" target="blank">
+          <img
+          src="img/su_social.png"
+          alt="Syracuse University Social logo"
+          width="100px"
+          height="100px"
+          />
+        </a>
+        <h3>Social Media app for Syracuse University Students</h3>
+      </div>        
+    </div>
+  </section>
+  <br/>
+
+  <script src="projects.js"></script>
 </body>
 </html>
