@@ -184,6 +184,12 @@ body {
   height: 30%;
   left: 100%;
 }  
+
+#experience {
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
   
 /* Styling for smaller sized screens */
 @media (max-width: 800px) {
