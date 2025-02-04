@@ -5,6 +5,7 @@
   --primary2: #e1120e;  
   --b: #000;
   --w: #dddddd;
+  --wSecond: #d3d3d3;
   --g: #f4f4f4;
   --syracuse: #f76801;
 }
@@ -12,6 +13,7 @@
 /* Smooth Scrooling if I want to add a nav bar */
 * {
   scroll-behavior: smooth;
+  /* border: 1px solid red */
 }
 
 html {
@@ -85,11 +87,6 @@ body {
   color:white
 }
 
-#bio img {
-  max-width: 500px;
-  max-height: 500px;
-}
-
 
 /* Each of the drawings */
 #gallery > .interactable {
@@ -148,33 +145,93 @@ body {
 }
 
 #bio img {
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 /* Grid container that contains education and my skills */
-#toolbelt {
+/* #toolbelt {
   width: 100%;
   display: grid;
   grid-template-areas: 
     "edu  lang  fw  ts";
 
   grid-template-columns: 2fr 1fr 1fr 1fr;
+} */
+#toolbelt {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* margin: 5px; */
+}
+
+#education, #languages, #frameworks, #tools {
+  flex-direction: column;
+  gap: 0px;
+  margin: 10px;
 }
 
 /* Set education Styling */
 #education { 
   display: flex;
   flex-direction: column;
-  grid-area: edu;
   color: var(--syracuse);
-  align-items: center;
   text-align: left;
 }
 
-#languages {grid-area: lang;}
-#frameworks {grid-area: fw;}
-#tools {grid-area: ts;}
+
+#education > div > h2, h4 { 
+  margin-bottom: 0;
+}
+#education > div > h3 {
+  margin: 0;
+  padding: 0;
+}
+
+#languages > div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  row-gap: 5px;
+  flex-wrap: wrap;   
+  background-color: transparent; 
+}
+
+#languages > div > h3 {
+  margin: 0;
+  background-color: var(--wSecond);
+  padding: 5px;
+  border-radius: 10px;
+}
+#frameworks > div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  row-gap: 5px;
+  flex-wrap: wrap;   
+  background-color: transparent; 
+}
+#frameworks > div > h3 {
+  margin: 0;
+  background-color: var(--wSecond);
+  padding: 5px;
+  border-radius: 10px;
+}
+#tools > div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  row-gap: 5px;
+  flex-wrap: wrap;   
+  background-color: transparent; 
+}
+
+#tools > div > h3 {
+  margin: 0;
+  background-color: var(--wSecond);
+  padding: 5px;
+  border-radius: 10px;
+}
 
 /* Styling for divs that need a white bg */
 .whitebg{
@@ -198,6 +255,18 @@ body {
   padding-left: 1vw;
 }
 
+#body-container {
+  height: 100%;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#footer-container {
+  position: fixed;
+  bottom: 0;
+  background-color: red;
+}
 
 @media (max-width: 940px){
   html {
@@ -207,56 +276,43 @@ body {
 }
 
 /* Styling for smaller sized screens */
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   #toolbelt {
-    width: 100%;
-    padding: 5px;
-    display: grid;
-
-    grid-template-areas: 
-      "edu" 
-      "lang"
-      "fw" 
-      "ts";
-  
-    grid-template-columns: 1fr;
-  }
-
-  #education { 
-    display: flex;
-    flex-direction: column;
-    grid-area: edu;
-    color: var(--syracuse);
-    align-items: center;
-    padding-left: 35%;
-    text-align: center;
-  }
-  
-  #languages {
-    display: flex;
+    width: 90%;
+    margin: 0 auto;
     flex-direction: row;
-    align-items: center;
-    padding-left: 25%;
-    text-align: left;
-    gap: 10vw;
+    justify-content: space-around;
+  }
+  #languages {
+    width: 25%;
+  }
+  #languages > div {
+    flex-direction: row;
+  }
+  #languages > div > h3 {
+    width: fit-content;
   }
   #frameworks {
-    display: flex;
+    width: 25%;
+  }
+  #frameworks > div {
     flex-direction: row;
-    align-items: center;
-    padding-left: 15%;
-    text-align: left;
-    gap: 10vw;
+  }
+  #frameworks > div > h3 {
+    width: fit-content;
   }
   #tools {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 10%;
-    text-align: left;
-    gap: 10vw;
+    width: 25%;
   }
+  #tools > div {
+    flex-direction: row;
+  }
+  #tools > div > h3 {
+    width: fit-content;
+  }
+}
 
+@media (max-width: 800px) {
   #bio h2 {
     font-size:1rem; 
   }
@@ -272,23 +328,6 @@ body {
   #bio h2{
     border-left: 0;
     padding: 0;
-  }
-
-  #toolbelt {
-    width: 100vw;
-    padding: 0px;
-    margin: 0px;
-    grid-template-areas: 
-      "edu" 
-      "lang"
-      "fw" 
-      "ts";
-
-    grid-template-columns: 1fr;
-  }
-
-  #education, #languages, #frameworks, #tools {
-    text-align: center;
   }
 
   h2 {

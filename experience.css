@@ -65,10 +65,12 @@ body {
 /* Container for the work experiences */
 #work-exp {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  /* padding-left: 10vw; */
+  /* padding-right: 10vw; */
+  margin-top: 10px;
 }
 
 #work-exp a {
@@ -86,21 +88,20 @@ body {
   font-weight: 700;
 }
 
-#work-time {
-  width: 20vw; /* The date gets 20 percent */
-}
-
 #work-content {
-  border-left-width: 1vh;
+  /* border-left-width: 1vh; */
   border-left: solid var(--primary);
   padding-left: 1vw;
-  width: 80vw; /* The content gets 80 percent */
+  h3:last-child {
+    margin-bottom: 0;
+  }
+  /* width: 80vw; The content gets 80 percent */
 }
 
 #work-content a:hover{
   color: var(--primary);
 }
-  
+
 /* Styling for text that need to be color: primary2 */
 .red2{
   color: var(--primary);
@@ -187,7 +188,7 @@ body {
 
 #experience {
   width: 80%;
-  max-width: 1500px;
+  max-width: 1000px;
   margin: 0 auto;
 }
   
@@ -207,11 +208,6 @@ body {
     font-size: 1rem;
   }
 
-  /* Container for the work experiences */
-  #work-exp {
-    padding-left: 5vw;
-    padding-right: 5vw
-  }
   #resume {
     /* font-size: 1rem; */
     padding: 10px;
@@ -228,9 +224,9 @@ body {
     background: linear-gradient(to right, var(--primary), #00000000);
   }
 
-  #experience {
+  /* #experience {
     margin-left: 10vw;
-  }
+  } */
 
   #experience h2 {
     padding: 0;
