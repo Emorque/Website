@@ -2,14 +2,15 @@ const template = document.createElement("template");
 template.innerHTML = `
     <div class="navbar">
         <ul>
-            <li><a href="/"><img src="img/logo.svg" width="40" height="40" alt="My own Logo"/></a></li>
-            <li><a href="/experience">Experience</a></li>
-            <li><a href="/projects">Projects</a></li>
+            <li><a href="/" id="home-button"><img src="img/logo.svg" width="40" height="40" alt="My own Logo"/></a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
         </ul>
     </div>
 `;
 
 // testing
+
 
 class CustomHeader extends HTMLElement {
     constructor(){

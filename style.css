@@ -3,8 +3,8 @@
 :root {
   --primary: #C00F0C;
   --primary2: #e1120e;  
-  --b: #000;
-  --w: #dddddd;
+  --b: #161616;
+  --w: #eaeaea;
   --wSecond: #d3d3d3;
   --g: #f4f4f4;
   --syracuse: #f76801;
@@ -22,19 +22,17 @@ html {
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
   background-color: var(--w);
-  color: black;
+  color: var(--b);
   font-family: Space Grotesk, sans-serif; 
-  margin: 0rem;
+  margin: 0;
 }
 
 #header-br {
   content: "";
   height: 69px;
   width: 100%;
-  background-color: black;
+  background-color: var(--b);
 }
 
 #name-container {
@@ -54,7 +52,7 @@ body {
 }
 
 #name-pattern {
-  background-color: black;
+  background-color: var(--b);
   z-index: 1;
   opacity: 10%;
 }
@@ -158,17 +156,28 @@ body {
 
   grid-template-columns: 2fr 1fr 1fr 1fr;
 } */
-#toolbelt {
+
+#toolbelt-wrapper {
+  /* background-color: black; */
   width: 100vw;
+  background-color: var(--b);
+}
+#toolbelt {
   display: flex;
   flex-direction: column;
   /* margin: 5px; */
 }
 
-#education, #languages, #frameworks, #tools {
+#languages, #frameworks, #tools {
   flex-direction: column;
   gap: 0px;
   margin: 10px;
+}
+
+#education {
+  /* width: 100%; */
+  display: flex;
+  padding: 10px;
 }
 
 /* Set education Styling */
@@ -180,12 +189,16 @@ body {
 }
 
 
+#education > div > h2 {
+  margin-top: 0;
+}
+
 #education > div > h2, h4 { 
   margin-bottom: 0;
 }
 #education > div > h3 {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #languages > div {
@@ -202,6 +215,9 @@ body {
   background-color: var(--wSecond);
   padding: 5px;
   border-radius: 10px;
+}
+#frameworks > h2 {
+  word-wrap: break-word;
 }
 #frameworks > div {
   display: flex;
@@ -276,12 +292,26 @@ body {
 }
 
 /* Styling for smaller sized screens */
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   #toolbelt {
     width: 90%;
     margin: 0 auto;
     flex-direction: row;
     justify-content: space-around;
+    padding-bottom: 10px;
+  }
+  #education {
+    /* width: 90%; */
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #education > div > h4 { 
+    margin-top: 0;
+    /* margin-bottom: 21px; */
   }
   #languages {
     width: 25%;
@@ -344,5 +374,468 @@ body {
 
   .rect-top {
     top: -70%; 
+  }
+}
+
+
+/* Styling for divs that need a white bg */
+.whitebg{
+  background: linear-gradient(to bottom right, white 0%, white 50%, var(--g) 50%, var(--g) 100%);
+}
+  
+
+/*Styling for the experience bar */
+#exp-bar {
+  content: "";
+  height: 20px;
+  width: 1vw;
+  background: linear-gradient(to right, var(--primary), #00000000);
+}
+  
+#experience-section h2 {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+#question-mark {
+    transition: all 1s;
+}
+.nopad {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Container for the work experiences */
+#work-exp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding-left: 10vw; */
+  /* padding-right: 10vw; */
+  margin-top: 10px;
+}
+
+#work-exp a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#work-exp h2 {
+  font-size:1.5rem; 
+  font-weight: 700;
+}
+
+#work-exp h3 {
+  font-size:1rem; 
+  font-weight: 700;
+}
+
+#work-content {
+  /* border-left-width: 1vh; */
+  border-left: solid var(--primary);
+  padding-left: 1vw;
+  h3:last-child {
+    margin-bottom: 0;
+  }
+  /* width: 80vw; The content gets 80 percent */
+}
+
+#work-content a {
+  transition: color 0.5s ease;
+}
+
+#work-content a:hover{
+  color: var(--primary);
+}
+
+/* Styling for text that need to be color: primary2 */
+.red2{
+  color: var(--primary);
+  padding-left: 1vw;
+}
+
+/* Container for the resume button */
+#resume {
+  display: inline-block;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: var(--b);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px;
+  position: relative;
+}
+
+/* Pulsing animation for when the resume button is hovered */
+#resume:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.99);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* rect class for adding rectangles coming out of the button */
+.rect {
+  position: absolute;
+  background-color: var(--b);
+  transform: translateX(-50%);
+}
+
+.rect-top:nth-of-type(1) {
+  top: -40%; 
+  width: 10%;
+  height: 50%;
+  left: 30%
+}
+
+.rect-top:nth-of-type(2) {
+  top: -30%; 
+  width: 10%;
+  height: 50%;
+  left: 80%;
+}
+
+.rect-bottom:nth-of-type(3) {
+  bottom: -35%; 
+  width: 10%;
+  height: 40%;
+  left: 10%
+}
+
+.rect-bottom:nth-of-type(4) {
+  bottom: -35%; 
+  width: 10%;
+  height: 50%;
+  left: 60%;
+}
+
+.rect-left {
+  width: 10%;
+  height: 30%;
+  left: -4%;
+  top: 30%;
+}  
+.rect-right {
+  top: 60%;
+  width: 10%;
+  height: 30%;
+  left: 100%;
+}  
+
+#experience-section {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+  
+/* Styling for smaller sized screens */
+@media (max-width: 800px) {
+  #resume {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  #resume {
+    /* font-size: 1rem; */
+    padding: 10px;
+  }
+}
+
+
+#my-websites {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  max-width: 1500px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+/* Class for the webistes */
+.website {
+  height: fit-content;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opactity 1s ease;
+  color: var(--w);
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  transition: all 0.5s linear;
+}
+
+/* Gradient animation for hovering over website */
+.website:hover {
+  background: linear-gradient(-45deg, var(--b), #202020, var(-b), #202020);
+  background-size: 200%, 200%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.website > img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+}
+
+.web-info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.caption, .web-link svg, #steamfiber-button, #typeswitch-button, #ot-button {
+  font-size: 1rem;
+  color: var(--w);
+  fill: var(--w);
+}
+
+.web-link{
+  height: 30px;
+  width: 30px;
+}
+
+/* Container for website button and links */
+.web-link h3 {
+  color: var(--primary2);
+}
+
+.web-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Styling for the Demo/HomePage button for each website */
+.web-button {
+  width: 100px;
+  background-color: var(--primary);
+  border: 1px solid var(--b);
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.web-button:hover {
+  color: white;
+}
+
+.web-link a {
+  display: flex;
+  /* align-items: center; */
+  svg {
+    transition: transform 0.5s ease;
+  }
+}
+
+#steamfiber-button, #typeswitch-button, #ot-button{
+  transition: transform 0.5s ease;
+}
+
+#steamfiber-button:hover, #typeswitch-button:hover, #ot-button:hover {
+  cursor: pointer;
+  transform: translate(0px, -5px);
+  fill:var(--primary);
+}
+
+.web-link a:hover {
+  svg {
+    transform: translate(0px, -5px);
+    fill:var(--primary);
+  }
+}
+
+/* Styling for non-website projects */
+
+#moreProjects, #gameProjects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mProjects {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 500px;
+  background: linear-gradient(to right, #222222, var(--b));
+  color: var(--w);
+  
+  border-radius: 5px;
+  
+  h2 {
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+.mProjects-container {
+  display: flex; 
+  align-items: start; 
+  flex-direction: column;
+  h3 {
+    margin-top: 0;
+    padding-left: 10px;
+  }
+}
+
+/* Animation for project logos */
+.imgLink {
+  /* transition: transform 0.5s ease; */
+  border-radius: 5px;
+  background: radial-gradient(#404040, var(--b));
+}
+
+.imgLink img {
+  transition: transform 0.5s ease;
+}
+.imgLink:hover > img {
+  transform: translate(0, -3px);
+}
+
+
+/* Styling for headings */
+.cen {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.nopad {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.red2{
+  color: var(--primary);
+  padding-left: 1vw;
+}
+
+/* Removes Links */
+a {
+  text-decoration: none;
+}
+
+
+/* Style rules for Navbar */
+.navbar {
+  position: relative;
+  z-index: 3;
+}
+
+/* Style rules for all items in ul */
+.navbar ul {
+  position: fixed;
+  margin-top: 0px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.904);
+  list-style: none;
+  overflow: hidden;
+  top: 0;
+  padding-top: 5px;
+  padding-left: 5px;
+  width: 100%;
+  
+  display: flex; /* Use flexbox */
+  align-items: center; /* Optionally center items vertically (if needed) */
+}
+
+.navbar ul li {
+  float: left;
+  padding: 10px;
+}
+
+.navbar ul li a {
+  display: block;
+  text-align: center;
+  /* padding: 10px; */
+  font-family: Arial;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.navbar ul li a:hover {
+  font-weight: bold;
+  color: var(--primary2);
+}
+
+
+#more-projects-container{
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 700px) {
+  .website {
+    max-width: 1150px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* height: 100%; */
+    align-items: stretch;
+  }
+  .web-info {
+    /* width: 25%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .website > img {
+    width: 70%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+  }
+  #more-projects-container{
+    display: flex;
+    flex-direction: row;
   }
 }

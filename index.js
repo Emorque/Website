@@ -1,88 +1,65 @@
-// // Handling the gallery container 
+const homeButton = document.getElementById('home-button');
+const expButton = document.getElementById('experience-button');
+const projectButton = document.getElementById('projects-button');
 
-// // const gallery = document.getElementById("gallery");
-// const leftSide = document.getElementById("left-container");
+homeButton.addEventListener('click', () => {
+    window.scrollTo(0, 0);
+})
 
-// const handleOnDown = e => gallery.dataset.mouseDownAt = e.clientX;
+const expContainer = document.getElementById('experience');
 
-// const handleOnUp = () => {
-//   gallery.dataset.mouseDownAt = "0";  
-//   gallery.dataset.prevPercentage = gallery.dataset.percentage;
-// }
-
-// const handleOnMove = e => {
-//   if(gallery.dataset.mouseDownAt === "0") return;
-
-//   const mouseDelta = parseFloat(gallery.dataset.mouseDownAt) - e.clientX,
-//         maxDelta = window.innerWidth / 2;
-  
-//   const percentage = (mouseDelta / maxDelta) * -100,
-//         nextPercentagePre = parseFloat(gallery.dataset.prevPercentage) + percentage,
-//         nextPercentage = Math.max(Math.min(nextPercentagePre, 5), -((gallery.scrollWidth - window.innerWidth + 50) / window.innerWidth) * 100);
-  
-
-//   gallery.dataset.percentage = nextPercentage;
-  
-//   gallery.animate({
-//     transform: `translate(${nextPercentage}%, 0%)`
-//   }, { duration: 1200, fill: "forwards"});
-
-// }
-
-// window.onmousedown = e => handleOnDown(e);
-// window.ontouchstart = e => handleOnDown(e.touches[0]);
-// window.onmouseup = e => handleOnUp(e);
-// window.ontouchend = e => handleOnUp(e.touches[0]);
-// window.onmousemove = e => handleOnMove(e);
-// window.ontouchmove = e => handleOnMove(e.touches[0]);
+expButton.addEventListener('click', () => {
+    window.scrollTo(0, expContainer.getBoundingClientRect().top + window.scrollY - 70)
+})
 
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('show');
-//     }
-//     else {
-//       if (!entry.target.classList.contains('onetime')){
-//         entry.target.classList.remove('show');
-//       }
-//     }
-//   });
-// });
+const projectContainer = document.getElementById('projects');
 
-// const hiddenElements = document.querySelectorAll('.hidden');
-// hiddenElements.forEach((e) => observer.observe(e));
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   setTimeout(function() {
-//     document.querySelector('.left-text').classList.add('loaded');
-//   }, 500); // 100ms delay
-// });
+projectButton.addEventListener('click', () => {
+    window.scrollTo(0, projectContainer.getBoundingClientRect().top + window.scrollY - 69)
+})
 
 
-// // Handling experience bar animation 
-// const experienceBar = document.getElementById("exp-bar");
-// const qmark = document.getElementById("question-mark");
+const typeswitchPhoto = document.getElementById('typeswitch-photo');
+const typeswitchButton = document.getElementById('typeswitch-button');
+const typeswitchPath = typeswitchButton.querySelector('path');
 
-// const findBar = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       move();
-//       findBar.unobserve(experienceBar);
-//     }
-//   });
-// });
 
-// findBar.observe(experienceBar);
+typeswitchButton.addEventListener("click", () => {
+    if (typeswitchPath.getAttribute('d') === "m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393") {
+        typeswitchPhoto.src = "gifs/TypeSwitch_demo.gif";
+        typeswitchPath.setAttribute('d', "M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5") 
+    } else {
+        typeswitchPhoto.src = "img/typeswitch.png";
+        typeswitchPath.setAttribute('d', "m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393") 
+    }
+});
 
-// function move() {
-//   let width = 1;
-//   let interval = setInterval(() => {
-//     if (width >= 50) {
-//       qmark.style.opacity = 1;
-//       clearInterval(interval);
-//     }
-//     width++;
-//     experienceBar.style.width = width + "%";
-//   },50);
-// }
+// OT photo
+const otPhoto = document.getElementById('ot-photo');
+const otButton = document.getElementById('ot-button');
+const otPath = otButton.querySelector('path');
+
+otButton.addEventListener("click", () => {
+    if (otPath.getAttribute('d') === "m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393") {
+        otPhoto.src = "gifs/OT_UI_demo.gif";
+        otPath.setAttribute('d', "M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5") 
+    } else {
+        otPhoto.src = "img/octopath.webp";
+        otPath.setAttribute('d', "m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393") 
+    }
+});
+
+const steamfiberPhoto = document.getElementById('steamfiber-photo');
+const steamfiberButton = document.getElementById('steamfiber-button');
+const steamfiberPath = steamfiberButton.querySelector('path');
+
+steamfiberButton.addEventListener("click", () => {
+    if (steamfiberPath.getAttribute('d') === "m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393") {
+        steamfiberPhoto.src = "gifs/SteamFiber_demo.gif";
+        steamfiberPath.setAttribute('d', "M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5") 
+    } else {
+        steamfiberPhoto.src = "img/steamfiber.webp";
+        steamfiberPath.setAttribute('d', "m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393") 
+    }
+});
