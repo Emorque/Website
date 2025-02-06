@@ -4,6 +4,7 @@
   --primary: #C00F0C;
   --primary2: #e1120e;  
   --b: #161616;
+  --b2: #292929;
   --w: #eaeaea;
   --wSecond: #d3d3d3;
   --g: #f4f4f4;
@@ -57,105 +58,45 @@ body {
   opacity: 10%;
 }
 
-/* Container for the biography */
+#bio-wrapper {
+  background-color: var(--b);
+  /* width: 100vw; */
+}
+
 #bio{
   display: flex;
+  margin: 0 auto;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  gap: 10vw;
+  background-color: var(--b);
   text-align: center;
 }
 
-/* Each child element is set to 25vw*/
 #bio > * {
-  width: 25vw;  
-  height: auto;  
+  width: 75%;  
 }
 
 #bio h2 {
   font-size:1.5rem; 
   font-weight: 700;
-  padding-left: 10vw;
-  border-left-width: 1vw;
-  border-left: solid var(--primary);
-  color:white
-}
-
-
-/* Each of the drawings */
-#gallery > .interactable {
-  width: 40vmin;
-  height: 56vmin;
-  object-fit: cover;
-  object-position: center;
-  filter: drop-shadow(0 0 0.25rem white);
-  transition: tranform 10s ease-in-out;
-  /* border-width: 1000px; */
-}
-
-/* Container for the drawings */
-#gallery{
-  display: flex;
-  gap: 4vmin;
-  transform: translate(0%, 0%);
-  user-select: none;
-  width: 100vw;
-}
-
-/* Covers the scaling animation */
-/* .interactable {
-} */
-
-.interactable:hover {
-  transform: scale(1.01);
-}
-
-/* Container for the biography */
-#bio{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  gap: 10vw;
-  text-align: center;
-}
-
-/* Each child element is set to 25vw*/
-#bio > * {
-  width: 25vw;  
-  height: auto;  
-}
-
-#bio h2 {
-  font-size:1.5rem; 
-  font-weight: 700;
-  padding-left: 10vw;
-  border-left-width: 1vw;
-  border-left: solid var(--primary);
-  color:white
+  color:white;
+  margin-bottom: 20px;
 }
 
 #bio img {
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
-/* Grid container that contains education and my skills */
-/* #toolbelt {
-  width: 100%;
-  display: grid;
-  grid-template-areas: 
-    "edu  lang  fw  ts";
-
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-} */
+#bio-img-resume {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
 
 #toolbelt-wrapper {
   /* background-color: black; */
@@ -165,19 +106,22 @@ body {
 #toolbelt {
   display: flex;
   flex-direction: column;
-  /* margin: 5px; */
+  padding: 20px;
+  padding-top: 10px;
 }
 
 #languages, #frameworks, #tools {
   flex-direction: column;
   gap: 0px;
-  margin: 10px;
+  /* margin: 10px; */
 }
 
 #education {
   /* width: 100%; */
   display: flex;
-  padding: 10px;
+  padding: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 /* Set education Styling */
@@ -259,12 +203,6 @@ body {
   background: linear-gradient(to right, white 0%, white 50%, var(--g) 50%, var(--g) 100%);
 }
 
-/* Styling for text that need to be color: primary2 */
-.red2{
-  color: var(--primary2);
-  padding-left: 1vw;
-}
-
 /* Styling for text that need to be color: white */
 .wh{
   color: white;
@@ -294,27 +232,30 @@ body {
 /* Styling for smaller sized screens */
 @media (min-width: 700px) {
   #toolbelt {
-    width: 90%;
+    /* width: 90%; */
     margin: 0 auto;
-    flex-direction: row;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
     justify-content: space-around;
-    padding-bottom: 10px;
   }
   #education {
     /* width: 90%; */
     margin: 0 auto;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content:space-evenly;
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    max-width: 1000px;
   }
   #education > div > h4 { 
     margin-top: 0;
     /* margin-bottom: 21px; */
   }
   #languages {
-    width: 25%;
+    /* width: 25%; */
   }
   #languages > div {
     flex-direction: row;
@@ -323,7 +264,7 @@ body {
     width: fit-content;
   }
   #frameworks {
-    width: 25%;
+    /* width: 25%; */
   }
   #frameworks > div {
     flex-direction: row;
@@ -332,13 +273,32 @@ body {
     width: fit-content;
   }
   #tools {
-    width: 25%;
+    /* width: 25%; */
   }
   #tools > div {
     flex-direction: row;
   }
   #tools > div > h3 {
     width: fit-content;
+  }
+  
+  #bio{
+    flex-direction: row;
+    max-width: 1000px;
+  }
+
+  #bio > * {
+    width: 25%;  
+  }
+
+
+  #bio img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  #bio-img-resume {
+    /* padding-bottom: 20px; */
   }
 }
 
@@ -350,26 +310,12 @@ body {
 
 /* Styling for phone screens */
 @media (max-width: 600px) {
-  #bio{
-    display: flex;
-    flex-direction: column;
-  }
-
-  #bio h2{
-    border-left: 0;
-    padding: 0;
-  }
-
   h2 {
     font-size: 1.25rem;
   }
 
   h3 {
     font-size: 1rem;
-  }
-  
-  #bio > * {
-    width: 80vw;
   }
 
   .rect-top {
@@ -421,6 +367,10 @@ body {
   color: inherit;
 }
 
+h1 {
+  font-size:1.75rem; 
+}
+
 #work-exp h2 {
   font-size:1.5rem; 
   font-weight: 700;
@@ -449,18 +399,11 @@ body {
   color: var(--primary);
 }
 
-/* Styling for text that need to be color: primary2 */
-.red2{
-  color: var(--primary);
-  padding-left: 1vw;
-}
-
 /* Container for the resume button */
 #resume {
-  display: inline-block;
   border-radius: 10px;
   text-decoration: none;
-  background-color: var(--b);
+  background-color: var(--b2);
   color: white;
   font-size: 1rem;
   font-weight: 500;
@@ -534,7 +477,8 @@ body {
 }  
 
 #experience-section {
-  width: 80%;
+  padding-left: 20px;
+  padding-right: 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -547,6 +491,9 @@ body {
 }
 
 @media (max-width: 600px) {
+  h1 {
+    font-size:1.5rem; 
+  }
   h2 {
     font-size: 1.25rem;
   }
@@ -714,6 +661,7 @@ body {
   display: flex; 
   align-items: start; 
   flex-direction: column;
+  padding: 10px;
   h3 {
     margin-top: 0;
     padding-left: 10px;
@@ -748,9 +696,15 @@ body {
   padding-right: 0;
 }
 
+#expTitle {
+  color: var(--primary);
+  margin-bottom: 0;
+  
+}
+
 .red2{
   color: var(--primary);
-  padding-left: 1vw;
+  /* padding-left: 1vw; */
 }
 
 /* Removes Links */
@@ -809,7 +763,41 @@ a {
 #more-projects-container{
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
+
+
+.techstack-logos{
+  padding-top: 10px;
+}
+
+.techstack-logos svg {
+  height: 30px;
+  width: 30px;
+}
+
+.web-info h2 {
+  margin-top: 0;
+}
+
+.mProjects-title {
+  display: flex;
+  flex-direction: column-reverse
+}
+
+.mProjects-title h2 {
+  padding-top: 0;
+}
+
+.mProjects-container h3 {
+  padding-right: 10px;
+}
+.mp-logos {
+  padding-left: 10px;
+}
+
 
 
 @media (min-width: 700px) {
@@ -834,8 +822,20 @@ a {
     border-radius: 10px;
     border: 2px solid var(--primary);
   }
+}
+
+@media (min-width: 780px) {
   #more-projects-container{
     display: flex;
     flex-direction: row;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1051px) and (max-width: 1105px) {
+  .expandCon {
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 }

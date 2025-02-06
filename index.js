@@ -16,7 +16,7 @@ expButton.addEventListener('click', () => {
 const projectContainer = document.getElementById('projects');
 
 projectButton.addEventListener('click', () => {
-    window.scrollTo(0, projectContainer.getBoundingClientRect().top + window.scrollY - 69)
+    window.scrollTo(0, projectContainer.getBoundingClientRect().top + window.scrollY - 68)
 })
 
 
