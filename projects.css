@@ -98,7 +98,7 @@ body {
   margin-bottom: 10px;
 }
 
-.caption, .web-link svg, #steamfiber-button, #typeswitch-button, #ot-button {
+.caption, .web-link svg, #steamfiber-button, #projectTape-button, #ot-button {
   font-size: 1rem;
   color: var(--w);
   fill: var(--w);
@@ -143,11 +143,11 @@ body {
   }
 }
 
-#steamfiber-button, #typeswitch-button, #ot-button{
+#steamfiber-button, #projectTape-button, #ot-button{
   transition: transform 0.5s ease;
 }
 
-#steamfiber-button:hover, #typeswitch-button:hover, #ot-button:hover {
+#steamfiber-button:hover, #projectTape-button:hover, #ot-button:hover {
   cursor: pointer;
   transform: translate(0px, -8px);
   fill:var(--primary);

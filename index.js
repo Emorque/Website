@@ -19,19 +19,18 @@ projectButton.addEventListener('click', () => {
     window.scrollTo(0, projectContainer.getBoundingClientRect().top + window.scrollY - 68)
 })
 
+const projectTapePhoto = document.getElementById('projectTape-photo');
+const projectTapeButton = document.getElementById('projectTape-button');
+const projectTapePath = projectTapeButton.querySelector('path');
 
-const typeswitchPhoto = document.getElementById('typeswitch-photo');
-const typeswitchButton = document.getElementById('typeswitch-button');
-const typeswitchPath = typeswitchButton.querySelector('path');
 
-
-typeswitchButton.addEventListener("click", () => {
-    if (typeswitchPath.getAttribute('d') === "m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393") {
-        typeswitchPhoto.src = "gifs/TypeSwitch_demo.gif";
-        typeswitchPath.setAttribute('d', "M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5") 
+projectTapeButton.addEventListener("click", () => {
+    if (projectTapePath.getAttribute('d') === "m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393") {
+        projectTapePhoto.src = "gifs/ProjectTape_demo.gif";
+        projectTapePath.setAttribute('d', "M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5") 
     } else {
-        typeswitchPhoto.src = "img/typeswitch.png";
-        typeswitchPath.setAttribute('d', "m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393") 
+        projectTapePhoto.src = "img/projectTape.png";
+        projectTapePath.setAttribute('d', "m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393") 
     }
 });
 
