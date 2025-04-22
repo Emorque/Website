@@ -1,0 +1,62 @@
+:root {
+    --primary: #C00F0C;
+    --primary2: #e1120e;  
+    --b: #000;
+    --w: #FFF;
+    --g: #f4f4f4;
+    --syracuse: #f76801;
+}  
+
+
+/* Foot Container that houses links */
+#links {
+    display: flex;
+    justify-content: right;
+    padding-right: 4vw;
+    gap: 20px;
+    flex: 9;
+}
+
+#links-container{
+    display: flex;
+    padding: 1vw;
+    background-color: var(--w);
+    bottom: 0;
+}
+
+#links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Added animation for svgs: a slight Y increase when hovered */
+#links svg{
+    padding-bottom: 2vh;
+    padding-top: 1vh;
+    transition: transform 0.5s ease;
+}
+
+#links svg:hover{
+    fill:var(--primary);
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+/* Added animation for logo img: a slight Y increase when hovered */
+#logo img{
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    /* padding-top: 1vh; */
+    padding-left: 2vw;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+#logo img:hover {
+    transform: translateY(-5px);
+}
+
+#drawText2{
+    display:none;
+}
